@@ -1,0 +1,29 @@
+.cardItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 1.1rem;
+    margin-left: 20px;
+  }
+
+  &__title {
+    font-size: 1.15rem !important;
+    max-width: 346px;
+  }
+}
+
+.detailsBtn {
+  background-color: #f2f2f2 !important;
+  color: black !important;
+}
+
+.skipSelectionBtn {
+  margin-right: 8px !important;
+}

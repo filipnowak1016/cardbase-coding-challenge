@@ -1,0 +1,1 @@
+export const FETCH_SEO_SUITES = 'FETCH_SEO_SUITES';

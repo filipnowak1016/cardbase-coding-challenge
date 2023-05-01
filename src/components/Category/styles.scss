@@ -1,0 +1,17 @@
+.category {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.selected {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.divider {
+  height: 24px !important;
+}
