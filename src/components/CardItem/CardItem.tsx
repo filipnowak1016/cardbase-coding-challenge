@@ -32,6 +32,10 @@ const CardItem: React.FC<ICardItemProps> = ({ data }) => {
     [data.id, dispatch]
   );
 
+  const handleClickDetails = useCallback((event: React.MouseEvent<HTMLElement>) => {
+    event.stopPropagation();
+  }, []);
+
   return (
     <Box className="cardItem">
       <Box sx={{ display: 'flex' }} onClick={handleSelectItem}>
@@ -53,7 +57,11 @@ const CardItem: React.FC<ICardItemProps> = ({ data }) => {
                 Skip Selection
               </Button>
             ) : null}
-            <Button className="detailsBtn" variant="contained" color="secondary">
+            <Button
+              onClick={handleClickDetails}
+              className="detailsBtn"
+              variant="contained"
+              color="secondary">
               Details
             </Button>
           </Box>
