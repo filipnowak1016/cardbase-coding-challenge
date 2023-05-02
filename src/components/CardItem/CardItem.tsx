@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import Highlighter from 'react-highlight-words';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+// import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { Box, Button } from '@mui/material';
@@ -9,6 +9,7 @@ import './styles.scss';
 import useFilter from '../../hooks/useFilter';
 import { RootState } from '../../store';
 import { ISeoSuite, selectItem, removeSelection } from '../../store/modules/seoSuites/slice';
+import CardImg from '../CardImg/CardImg';
 import FavButton from '../FavButton/FavButton';
 
 interface ICardItemProps {
@@ -39,7 +40,7 @@ const CardItem: React.FC<ICardItemProps> = ({ data }) => {
   return (
     <Box className="cardItem">
       <Box sx={{ display: 'flex' }} onClick={handleSelectItem}>
-        <LazyLoadImage src={data.image || ''} width={118} height={118} alt="suiteImage" />
+        <CardImg src={data.image || ''} alt="suiteImage" />
         <Box className="cardItem__content">
           <Highlighter
             className="cardItem__title"
